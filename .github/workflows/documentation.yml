@@ -30,3 +30,7 @@ jobs:
         run: |
           npm install -g @compodoc/compodoc
           npx compodoc -p tsconfig.doc.json -d ./docs
+            git config --local user.email "actions@github.com"
+          git config --local user.name "Github Actions"
+          git add ./docs/* git commit -m "Updating github pages"
+          git push
