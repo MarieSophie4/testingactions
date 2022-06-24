@@ -1,6 +1,6 @@
-[![Wiki](https://github.com/MarieSophie4/testingactions/actions/workflows/wiki.yml/badge.svg)](https://github.com/MarieSophie4/testingactions/actions/workflows/wiki.yml)
-
 [![Merging to documentation](https://github.com/MarieSophie4/testingactions/actions/workflows/merge.yml/badge.svg)](https://github.com/MarieSophie4/testingactions/actions/workflows/merge.yml)
+[![Wiki](https://github.com/MarieSophie4/testingactions/actions/workflows/wiki.yml/badge.svg)](https://github.com/MarieSophie4/testingactions/actions/workflows/wiki.yml)
+[![Testing](https://github.com/MarieSophie4/testingactions/actions/workflows/testing.yml/badge.svg)](https://github.com/MarieSophie4/testingactions/actions/workflows/testing.yml)
 
 # Brokerportal   
 
