@@ -1,0 +1,60 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*",
+    "*.spec.ts",
+    "test.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "@axa/eslint-config-ng-toolkit"
+      ],
+      "rules": {
+        "@angular-eslint/component-selector" : [
+          "error",
+          {
+            "type": "element",
+            "prefix": "broker",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector" : [
+          "error",
+          {
+            "type": "element",
+            "prefix": "broker"
+          }
+        ],
+        "@typescript-eslint/naming-convention" : [
+          "error",
+          {
+            "selector": "enumMember",
+            "format": ["UPPER_CASE"]
+          }
+        ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "etc/no-t": "off",
+        "rxjs/no-topromise" : "warn"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

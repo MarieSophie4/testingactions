@@ -1,0 +1,54 @@
+version: 0.2
+env:
+  secrets-manager:
+    INTERMEDIATE_CA: /developer/axa/certificates/intermediatepr1/pubkey
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - yum install -y dos2unix
+  pre_build:
+    # Deploy S3 web hosting, WAF V2 and distribution CloudFormation templates
+    # Skip infra deployment if no changes detected (--no-fail-on-empty-changeset flag)
+    commands:
+      - export APP_NAME="cmtlife-brokerportal"
+      - export TAG_TABLE_NAME="cmtlife-web-${STAGE}"
+      - dos2unix ./read_tags.sh && chmod +rx ./read_tags.sh && source ./read_tags.sh ${TAG_TABLE_NAME}
+      - dos2unix ./infra.sh && chmod +rx ./infra.sh && source ./infra.sh
+  build:
+    # Build Angular application and upload build artefact to S3 artefacts bucket
+    commands:
+      - echo Starting cmtlife-brokerportal build
+      - export ZIP_FILE=$APP_NAME-$CODEBUILD_RESOLVED_SOURCE_VERSION.zip
+      - export S3_ZIP_FILE=s3://$ARTEFACTS_BUCKET/$ZIP_FILE
+      # Skip build if build artefact already exists for this commit ID - dos2unix ./sonar.sh && chmod +rx ./sonar.sh && source ./sonar.sh
+      - |
+        aws s3 ls $S3_ZIP_FILE
+        if [[ $? -ne 0 ]]; then
+          dos2unix ./build.sh && chmod +rx ./build.sh && source ./build.sh
+          echo Running sonar scanner
+          zip -r $ZIP_FILE dist/*
+          echo Uploading build artefact to S3 artefacts bucket
+          aws s3 cp $ZIP_FILE $S3_ZIP_FILE
+        else
+          echo Build artefact already exists, skipping build
+          aws s3 cp $S3_ZIP_FILE $ZIP_FILE
+          unzip $ZIP_FILE
+        fi
+  post_build:
+    # Upload build output to S3 web hosting bucket
+    commands:
+      - if [[ $CODEBUILD_BUILD_SUCCEEDING -eq 0 ]]; then echo PREVIOUS STAGE HAS FAILED, STOPPING BUILD; exit 1; fi
+      - echo Tokenizing application for $STAGE environment
+      - dos2unix ./tokenize.sh && chmod +rx ./tokenize.sh && source ./tokenize.sh
+      - echo Syncing build output with S3 web hosting bucket
+      - aws s3 sync dist s3://${S3_BUCKET} --delete
+      - echo Adding deployment info tags to source repository
+      - dos2unix ./tag.sh && chmod +rx ./tag.sh && source ./tag.sh
+      - echo Build completed!
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist*'
+  discard-paths: yes
