@@ -24,7 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+        with:
+          node-version: 12
+          
       - name: Set Git config
         run: |
           git config --local user.email "actions@github.com"
@@ -36,6 +38,16 @@ jobs:
           git checkout documentation
           git pull
           git merge --no-ff main -m "Auto-merge master back to doc"
+          git push
+
+      # Runs a set of commands using the runners shell
+      - name: Running compodoc
+        run: |
+          npm install -g @compodoc/compodoc
+          npx compodoc -p tsconfig.doc.json -d ./docs
+          git checkout documentation
+          git add ./docs/* 
+          git commit -m "Updating github pages"
           git push
 
     
