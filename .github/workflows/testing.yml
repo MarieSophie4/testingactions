@@ -35,14 +35,11 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "Github Actions"
-          
-      # ESLint and Prettier must be in `package.json`
-      - name: Install Node.js dependencies
-        run: |
-          npm ci
+  
 
       - name: Run linters
         run: |
+          npm i eslint
           ng lint --fix > lint.txt
           
       - name: Running compodoc
