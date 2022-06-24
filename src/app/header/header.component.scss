@@ -1,0 +1,7 @@
+@import "~@axa/ng-toolkit-scss/helpers/media-queries";
+
+@include media-breakpoint-down(md) {
+  :host {
+    margin-bottom: 72px;
+  }
+}

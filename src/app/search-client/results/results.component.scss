@@ -1,0 +1,23 @@
+.page-nr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #23008f;
+  margin: 8px;
+}
+
+.page-nr:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navigationtable {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.hidden {
+  visibility: hidden;
+}

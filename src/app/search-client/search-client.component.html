@@ -1,0 +1,19 @@
+
+<abe-spinner position="fixed" [active]="loading$ | async" ></abe-spinner>
+<!-- Exists from two parts -->
+<div class="frame banner"></div>
+
+
+<div class="axa-grid-container grid-span-12">
+  <h1 class="h1-edit frame page-title grid-span-12">{{ 'search-client.title' | translate }}</h1>
+
+  <div class="grid-card grid-span-12" >
+    <!-- PART 1: The search form -->
+    <broker-search class="grid-span-12" (request)="searchClient($event)"></broker-search>
+    <!-- PART 2: The results -->
+      <div id="results">
+        <broker-results  *ngIf="showResults" [searchResults]="searchResults$" (selectionTable)="selectionClient($event)" class="grid-span-12"></broker-results>
+      </div>
+  </div>
+</div>
+

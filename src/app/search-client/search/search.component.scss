@@ -1,0 +1,42 @@
+@import "~@axa/ng-toolkit-scss/helpers/color";
+
+.form-separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid $axa-color-silver;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mycontent-left {
+  border-right: 1px solid $axa-color-silver;
+}
+
+.end-btn {
+  // text-align: end;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.screen {
+  width: 65%;
+}
+
+.form {
+  display: grid;
+}
+
+a {
+  color: $axa-color-text-link-normal;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.axa-error {
+  color: $axa-color-error;
+}
