@@ -1,3 +1,7 @@
+[![Wiki](https://github.com/MarieSophie4/testingactions/actions/workflows/wiki.yml/badge.svg)](https://github.com/MarieSophie4/testingactions/actions/workflows/wiki.yml)
+
+[![Merging to documentation](https://github.com/MarieSophie4/testingactions/actions/workflows/merge.yml/badge.svg)](https://github.com/MarieSophie4/testingactions/actions/workflows/merge.yml)
+
 # Brokerportal   
 
 ## Documentation
