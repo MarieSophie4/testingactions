@@ -1,0 +1,10 @@
+<abe-header id="header-id">
+  <!-- Titel and subtitle -->
+  <abe-header-box  [appTitle]="'header.title' | translate " >
+    {{ 'header.title' | translate }}
+  </abe-header-box>
+
+  <!-- Language dropdown -->
+  <abe-header-helper id="lang" [languages]="langs" [defaultlang]="defaultLang" (abeChange)="languageChange($event.detail)"></abe-header-helper>
+
+</abe-header>

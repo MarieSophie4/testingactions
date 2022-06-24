@@ -1,0 +1,55 @@
+<!-- Data grid of three columns -->
+<div class="data-grid py20">
+
+  <!-- Title and text with the number of results -->
+  <div  class="title grid-span-3">{{ 'search-client.title' | translate }}</div>
+
+
+  <div  class="grid-span-3">{{ 'results.number--of--results' | translate:{ number: resultsNumber } }}</div>
+
+
+
+  <!-- Table visualizing the client results -->
+  <div id="results-table" class="data-table row-elements-3 grid-span-3">
+    <div class="headers">
+      <div class="h">{{ 'search-client.firstname' | translate}}</div>
+      <div class="h">{{ 'search-client.lastname' | translate}}</div>
+      <div class="h">{{ 'search-client.dob' | translate}}</div>
+    </div>
+
+
+    <!-- <abe-spinner position="static" active="true"  height="50px"></abe-spinner> -->
+
+    <div class="data edit-data" *ngFor="let item of (currentTableElements$ | async)">
+      <!-- Name is clickable to go to the dossier -->
+      <span class="d search-select-action" (click)="selectionTable.emit(item.cif)">{{item.firstname}}</span>
+      <span class="d">{{item.lastname}}</span>
+      <span class="d">{{item.dob | date:'dd/MM/yyyy'}}</span>
+    </div>
+
+    <!-- Table navigation -->
+    <div  class="navigationtable" *ngIf="pages > 1">
+
+      <ng-template #invisibleLeft>
+        <abe-icon class="hidden" name="arrowhead-left"></abe-icon>
+      </ng-template>
+      <abe-icon *ngIf="(currentTablePage | async) !== 0; else invisibleLeft" name="arrowhead-left" (abeClick)="changeTablePage(-1)"></abe-icon>
+
+      <div *ngFor="let item of counter(pages); let i = index " >
+        <ng-template #notselected>
+          <div class="page-nr" (click)="changeTablePage(i)">{{ i+1 }} </div>
+        </ng-template>
+        <div class="page-nr" *ngIf="(i) === (currentTablePage | async); else notselected"><b>{{ i+1 }}</b></div>
+      </div>
+
+      <ng-template #invisibleRight>
+        <abe-icon class="hidden" name="arrowhead-right"></abe-icon>
+      </ng-template>
+      <abe-icon *ngIf="(currentTablePage | async) !== pages-1; else invisibleRight" name="arrowhead-right" (abeClick)="changeTablePage(-2)"></abe-icon>
+    </div>
+  </div>
+</div>
+
+
+
+

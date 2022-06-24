@@ -1,0 +1,13 @@
+@import "../assets/icons";
+
+broker-footer {
+  margin-top: auto;   // push to bottom if available space
+  padding-top: 60px;  // minimal distance
+}
+
+// make the content of the page spread to at least the full capacity
+.full-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

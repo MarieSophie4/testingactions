@@ -1,0 +1,7 @@
+<div class="form-separator"></div>
+
+<!-- Broker image changes on the basis of the language cookie (no english version) -->
+<img [src]="imageUrl$ | async" [alt]="'footer.alt--text' | translate"/>
+
+<!-- The footer with copyright msg -->
+<abe-footer></abe-footer>

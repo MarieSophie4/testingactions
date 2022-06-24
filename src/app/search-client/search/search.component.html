@@ -1,0 +1,66 @@
+<!-- Data grid with three columns -->
+<div class="data-grid"  >
+  <div class="title grid-span-3">{{ 'search-client.title' | translate }}</div>
+
+  <!-- Second option to search, trough policy number -->
+  <div class="form" [formGroup]="formSearchPolicy">
+    <abe-text class="py10" formControlName="policynr"
+      format='^[0-9\.,\sBb]+$'
+      numbers-only="true"
+      [assistiveText]="'search-client.assistive-text--policy' | translate "
+      [label]=" 'search-client.policy--nr' | translate "
+      [invalidText]="controlsSearchPolicy?.policynr.errors?.invalidMsg | translate"
+      (abeBlur)="formatPolicyNr()"></abe-text>
+  </div>
+
+  <!-- Vertical divider -->
+  <div class="mycontent-left"></div>
+
+  <!-- First option to search, through credentials -->
+  <div class="form" [formGroup]="formSearchCredentials">
+    <abe-text class="py10 grid-span-1" formControlName='firstname' [invalidText]="'common.required' | translate" [label]=" 'search-client.lastname' | translate"></abe-text>
+    <abe-text class="py10 grid-span-1" formControlName="lastname" [invalidText]="'common.required' | translate" [label]="'search-client.firstname' | translate"></abe-text>
+    <abe-datepicker class="py10 grid-span-1" formControlName="dob"
+      [assistiveText]="'search-client.assistive-text--dob' | translate"
+      [label]=" 'search-client.dob' | translate "
+      [invalidText]="controlsSearchCredentials?.dob?.errors"></abe-datepicker>
+
+
+    <abe-checkbox class="py10" formControlName="partial">{{ 'search-client.partial--search' | translate }}
+      <abe-info icon="info">
+        <div>
+          {{ 'search-client.partial--search--info' | translate }}
+        </div>
+    </abe-info>
+    </abe-checkbox>
+  </div>
+
+
+  <!-- Horizontal divider -->
+  <div class="form-separator grid-span-3"></div>
+
+  <!-- Checkboxes -->
+  <div class="grid-span-2" [formGroup]="formCheckboxes">
+    <abe-checkbox (abeChange)="manageMandateError($event.detail)" formControlName="mandate">{{ 'search-client.mandate' | translate }}
+      <abe-info icon="info">
+        <div >
+          {{ 'search-client.mandate--info' | translate  }}
+        </div>
+    </abe-info>
+    </abe-checkbox>
+    <div class="axa-error" *ngIf="!mandateError">{{ 'common.required' | translate}} </div>
+
+  </div>
+
+  <!-- Search button -->
+  <abe-button class="grid-span-1 end-btn" [disabled]="searchBlocked$| async"  (abeClick)="search()"> {{ 'common.search' | translate }}</abe-button>
+
+  <div class="body grid-span-3 screen">
+    {{ 'search-client.form--explanation-p1' | translate}}
+    <!-- TODO put the correct link -->
+    <a (click)="openLinkInNewTab('https://www.google.com')">{{ 'search-client.form--explanation-p2'  | translate}}</a>
+    {{ 'search-client.form--explanation-p3'  | translate}}
+  </div>
+
+</div>
+
