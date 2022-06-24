@@ -1,0 +1,1584 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>brokerportal documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">brokerportal documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SearchComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/search-client/search/search.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The search component page
+It is a child of the search-client-component
+It will emit the search form to it&#39;s parent</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>broker-search</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./search.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./search.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#controlsSearchCredentials" >controlsSearchCredentials</a>
+                            </li>
+                            <li>
+                                <a href="#controlsSearchPolicy" >controlsSearchPolicy</a>
+                            </li>
+                            <li>
+                                <a href="#destroy$" >destroy$</a>
+                            </li>
+                            <li>
+                                <a href="#formCheckboxes" >formCheckboxes</a>
+                            </li>
+                            <li>
+                                <a href="#formSearchCredentials" >formSearchCredentials</a>
+                            </li>
+                            <li>
+                                <a href="#formSearchPolicy" >formSearchPolicy</a>
+                            </li>
+                            <li>
+                                <a href="#mandateError" >mandateError</a>
+                            </li>
+                            <li>
+                                <a href="#policyFormat" >policyFormat</a>
+                            </li>
+                            <li>
+                                <a href="#searchBlocked$" >searchBlocked$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addEnabler" >addEnabler</a>
+                            </li>
+                            <li>
+                                <a href="#formatPolicyNr" >formatPolicyNr</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initializeForms" >initializeForms</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#manageBlur" >manageBlur</a>
+                            </li>
+                            <li>
+                                <a href="#manageMandateError" >manageMandateError</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openLinkInNewTab" >openLinkInNewTab</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#requestValidation" >requestValidation</a>
+                            </li>
+                            <li>
+                                <a href="#search" >search</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#request" >request</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/search-client/search/search.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="request"></a>
+                        <b>request</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/search-client/search/search.component.ts:27</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>output event when clicking on the search button</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addEnabler"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>addEnabler</b></span>
+                        <a href="#addEnabler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addEnabler()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:159</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Listen to any change in the formelements in order to enable/disable the search button</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatPolicyNr"></a>
+                    <span class="name">
+                        <span ><b>formatPolicyNr</b></span>
+                        <a href="#formatPolicyNr"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatPolicyNr()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Format the policy field when onBlur event is activated</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeForms"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>initializeForms</b></span>
+                        <a href="#initializeForms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initializeForms()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initizalizing the different forms</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="manageBlur"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>manageBlur</b></span>
+                        <a href="#manageBlur"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>manageBlur(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, form: <a href="../interfaces/NamedFormGroup.html" target="_self">NamedFormGroup&lt;Like&lt;SearchRequest&gt;&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:187</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Blur the credentials side of the screen</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="../interfaces/NamedFormGroup.html" target="_self" >NamedFormGroup&lt;Like&lt;SearchRequest&gt;&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="manageMandateError"></a>
+                    <span class="name">
+                        <span ><b>manageMandateError</b></span>
+                        <a href="#manageMandateError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>manageMandateError(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:123</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Changes the value of the mandateError</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openLinkInNewTab"></a>
+                    <span class="name">
+                        <span ><b>openLinkInNewTab</b></span>
+                        <a href="#openLinkInNewTab"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openLinkInNewTab(link: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Opens a link in a new tab</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>link</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="requestValidation"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>requestValidation</b></span>
+                        <a href="#requestValidation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>requestValidation()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check validation of the form(s)</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Like&lt;SearchRequest&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>validated object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="search"></a>
+                    <span class="name">
+                        <span ><b>search</b></span>
+                        <a href="#search"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>search()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">src/app/search-client/search/search.component.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function called when search button is pressed
+output &#39;request&#39; is emitted when form is validated</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="controlsSearchCredentials"></a>
+                    <span class="name">
+                        <span ><b>controlsSearchCredentials</b></span>
+                        <a href="#controlsSearchCredentials"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/SearchCredentials.html" target="_self" >Like&lt;SearchCredentials&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/search-client/search/search.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>the controls of the credentials to be accessed in the html</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="controlsSearchPolicy"></a>
+                    <span class="name">
+                        <span ><b>controlsSearchPolicy</b></span>
+                        <a href="#controlsSearchPolicy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/SearchPolicy.html" target="_self" >Like&lt;SearchPolicy&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/search-client/search/search.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>the controls of the policy to be accessed in the html</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="destroy$"></a>
+                    <span class="name">
+                        <span ><b>destroy$</b></span>
+                        <a href="#destroy$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subject&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;boolean&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/search-client/search/search.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Destory object to unsubscribe subcribers when component is destoryed</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formCheckboxes"></a>
+                    <span class="name">
+                        <span ><b>formCheckboxes</b></span>
+                        <a href="#formCheckboxes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/search-client/search/search.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>form to check if mandate checkbox is ticked</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formSearchCredentials"></a>
+                    <span class="name">
+                        <span ><b>formSearchCredentials</b></span>
+                        <a href="#formSearchCredentials"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Like" target="_self" >NamedFormGroup&lt;Like&lt;SearchCredentials&gt;&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/search-client/search/search.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>form to search on credentials</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formSearchPolicy"></a>
+                    <span class="name">
+                        <span ><b>formSearchPolicy</b></span>
+                        <a href="#formSearchPolicy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Like" target="_self" >NamedFormGroup&lt;Like&lt;SearchPolicy&gt;&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/search-client/search/search.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>form to search based on policy</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mandateError"></a>
+                    <span class="name">
+                        <span ><b>mandateError</b></span>
+                        <a href="#mandateError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/search-client/search/search.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The error message shown on the checkbox</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="policyFormat"></a>
+                    <span class="name">
+                        <span ><b>policyFormat</b></span>
+                        <a href="#policyFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>/^[Bb][\s/\s]*([\d]{4})[\s/\s]*([\d]{3})[\s]?([\d]{3})[\s]?([\d]{3})[\s]*$/</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/search-client/search/search.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The format of the policy in regex form</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchBlocked$"></a>
+                    <span class="name">
+                        <span ><b>searchBlocked$</b></span>
+                        <a href="#searchBlocked$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>BehaviorSubject&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;boolean&gt;(true)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/search-client/search/search.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Observable to have disable functionality on search button</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { SearchCredentials } from &#x27;./../@model/search-credentials.model&#x27;;
+import { Component, EventEmitter, OnInit, Output, OnDestroy, ChangeDetectionStrategy } from &#x27;@angular/core&#x27;;
+import { FormBuilder, Validators, FormGroup, FormControl } from &#x27;@angular/forms&#x27;;
+import { NamedFormGroup, Like, namedFormGroupParser } from &#x27;src/app/@shared/form-utils/form-utils.module&#x27;;
+import { SearchPolicy } from &#x27;../@model/search-policy.model&#x27;;
+import { SearchRequest } from &#x27;../@model/search-request.model&#x27;;
+import { merge, Subject, BehaviorSubject } from &#x27;rxjs&#x27;;
+import { map, takeUntil } from &#x27;rxjs/operators&#x27;;
+import { noFutureDateValidation } from &#x27;src/app/@shared/form-utils/validators/no-future-date.validator&#x27;;
+import { policyNrValidation } from &#x27;src/app/@shared/form-utils/validators/policynr.validator&#x27;;
+
+/**
+ * The search component page
+ * It is a child of the search-client-component
+ * It will emit the search form to it&#x27;s parent
+ */
+@Component({
+  selector: &#x27;broker-search&#x27;,
+  templateUrl: &#x27;./search.component.html&#x27;,
+  styleUrls: [&#x27;./search.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
+})
+export class SearchComponent implements OnInit, OnDestroy {
+
+  /** output event when clicking on the search button */
+  @Output() request &#x3D; new EventEmitter&lt;unknown&gt;();
+
+  // Different forms for the 3 different parts of the screen
+  /** form to search on credentials */
+  formSearchCredentials : NamedFormGroup&lt;Like&lt;SearchCredentials&gt;&gt;;
+  /** form to search based on policy */
+  formSearchPolicy : NamedFormGroup&lt;Like&lt;SearchPolicy&gt;&gt;;
+  /** form to check if mandate checkbox is ticked */
+  formCheckboxes : FormGroup;
+
+  // Different controls for the different control access parts of the screen
+  /** the controls of the credentials to be accessed in the html */
+  controlsSearchCredentials : Like&lt;SearchCredentials&gt;;
+  /** the controls of the policy to be accessed in the html */
+  controlsSearchPolicy : Like&lt;SearchPolicy&gt;;
+
+  /** Destory object to unsubscribe subcribers when component is destoryed */
+  destroy$: Subject&lt;boolean&gt; &#x3D; new Subject&lt;boolean&gt;();
+
+  /** Observable to have disable functionality on search button */
+  searchBlocked$: BehaviorSubject&lt;boolean&gt; &#x3D; new BehaviorSubject&lt;boolean&gt;(true);
+
+  /** The error message shown on the checkbox */
+  mandateError &#x3D; true;
+
+  /** The format of the policy in regex form */
+  policyFormat &#x3D; /^[Bb][\s/\s]*([\d]{4})[\s/\s]*([\d]{3})[\s]?([\d]{3})[\s]?([\d]{3})[\s]*$/;
+
+  constructor(
+    private fb : FormBuilder
+  ) {}
+
+
+  ngOnInit(): void {
+    this.initializeForms();
+    this.addEnabler();
+
+    // Manage blur on the credentials (left side) of the screen
+    this.formSearchPolicy.valueChanges
+    .pipe(takeUntil(this.destroy$))
+    .subscribe(
+      v &#x3D;&gt; this.manageBlur(String(v.policynr), this.formSearchCredentials)
+    )
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
+  }
+
+  /**
+   * Function called when search button is pressed
+   * output &#x27;request&#x27; is emitted when form is validated
+   */
+  search(){
+    const requestParam : Like&lt;SearchRequest&gt; &#x3D; this.requestValidation()
+    if(this.formCheckboxes.valid &amp;&amp; requestParam){
+
+      this.searchBlocked$.next(true);
+      this.manageMandateError(true);
+      this.request.emit(requestParam);
+    }
+    else{
+      this.manageMandateError(false);
+      this.formCheckboxes.markAllAsTouched();
+    }
+  }
+
+  /**
+   * Format the policy field when onBlur event is activated
+   * @returns
+   */
+  formatPolicyNr() {
+    if(this.formSearchPolicy.valid){
+      const regex &#x3D; /^[Bb][\s/\s]*([\d]{4})[\s/\s]*([\d]{3})[\s]?([\d]{3})[\s]?([\d]{3})[\s]*$/;
+      const groups &#x3D; regex.exec(String(this.formSearchPolicy.value.policynr));
+      if(groups){
+        const formattedPolicy &#x3D; &#x60;B / ${groups[1]} / ${groups[2]} ${groups[3]} ${groups[4]}&#x60;
+        this.formSearchPolicy.controls[&#x27;policynr&#x27;].setValue(formattedPolicy);
+      }
+    }
+  }
+
+  /**
+   * Opens a link in a new tab
+   * @param link
+   */
+  openLinkInNewTab(link : string){
+    // TODO open the correct link
+    window.open(link, &quot;_blank&quot;);
+  }
+
+  /**
+   * Changes the value of the mandateError
+   * @param value
+   */
+  manageMandateError(value : boolean){
+    this.mandateError &#x3D; value;
+  }
+
+  // Private functions
+
+  /**
+   * Initizalizing the different forms
+   */
+   private initializeForms() {
+    this.formSearchCredentials &#x3D; namedFormGroupParser(this.fb.group(
+      {
+        firstname : [&#x27;&#x27;, [Validators.required, Validators.minLength(3)]],
+        lastname : [&#x27;&#x27;,  [Validators.required, Validators.minLength(3)]],
+        dob: [&#x27;&#x27;, [noFutureDateValidation]],
+        partial: false
+      }
+    ));
+    this.controlsSearchCredentials &#x3D; this.formSearchCredentials.controls;
+
+
+    this.formSearchPolicy &#x3D; namedFormGroupParser(this.fb.group(
+      {
+        policynr : [&#x27;&#x27;, [policyNrValidation]]
+      }
+    ));
+    this.controlsSearchPolicy &#x3D; this.formSearchPolicy.controls;
+
+    this.formCheckboxes &#x3D; new FormGroup({
+      mandate: new FormControl(false, Validators.requiredTrue),
+    });
+  }
+
+  /**
+   * Listen to any change in the formelements in order to enable/disable the search button
+   */
+   private addEnabler(){
+    merge(this.formSearchPolicy.valueChanges, this.formSearchCredentials.valueChanges)
+      .pipe(map(() &#x3D;&gt; this.requestValidation() &#x3D;&#x3D;&#x3D; null))
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(
+        (ve) &#x3D;&gt; {this.searchBlocked$.next(ve);}
+      );
+  }
+
+  /**
+   * Check validation of the form(s)
+   * @returns validated object
+   */
+  private requestValidation() : Like&lt;SearchRequest&gt; {
+    if(this.formSearchCredentials.valid){
+      return this.formSearchCredentials.value;
+    }
+    else if(this.formSearchPolicy.valid &amp;&amp; this.controlsSearchPolicy.policynr[&#x27;value&#x27;]){
+      return this.formSearchPolicy.value;
+    }
+    return null;
+  }
+
+  /**
+   * Blur the credentials side of the screen
+   * @param value
+   * @param form
+   */
+  private manageBlur(value : string, form: NamedFormGroup&lt;Like&lt;SearchRequest&gt;&gt;){
+    if(value?.length &gt; 0){
+      this.formSearchCredentials.reset();
+      this.formSearchCredentials.disable();
+    }
+    else {
+      this.formSearchCredentials.enable();
+    }
+  }
+
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Data grid with three columns --&gt;
+&lt;div class&#x3D;&quot;data-grid&quot;  &gt;
+  &lt;div class&#x3D;&quot;title grid-span-3&quot;&gt;{{ &#x27;search-client.title&#x27; | translate }}&lt;/div&gt;
+
+  &lt;!-- Second option to search, trough policy number --&gt;
+  &lt;div class&#x3D;&quot;form&quot; [formGroup]&#x3D;&quot;formSearchPolicy&quot;&gt;
+    &lt;abe-text class&#x3D;&quot;py10&quot; formControlName&#x3D;&quot;policynr&quot;
+      format&#x3D;&#x27;^[0-9\.,\sBb]+$&#x27;
+      numbers-only&#x3D;&quot;true&quot;
+      [assistiveText]&#x3D;&quot;&#x27;search-client.assistive-text--policy&#x27; | translate &quot;
+      [label]&#x3D;&quot; &#x27;search-client.policy--nr&#x27; | translate &quot;
+      [invalidText]&#x3D;&quot;controlsSearchPolicy?.policynr.errors?.invalidMsg | translate&quot;
+      (abeBlur)&#x3D;&quot;formatPolicyNr()&quot;&gt;&lt;/abe-text&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Vertical divider --&gt;
+  &lt;div class&#x3D;&quot;mycontent-left&quot;&gt;&lt;/div&gt;
+
+  &lt;!-- First option to search, through credentials --&gt;
+  &lt;div class&#x3D;&quot;form&quot; [formGroup]&#x3D;&quot;formSearchCredentials&quot;&gt;
+    &lt;abe-text class&#x3D;&quot;py10 grid-span-1&quot; formControlName&#x3D;&#x27;firstname&#x27; [invalidText]&#x3D;&quot;&#x27;common.required&#x27; | translate&quot; [label]&#x3D;&quot; &#x27;search-client.lastname&#x27; | translate&quot;&gt;&lt;/abe-text&gt;
+    &lt;abe-text class&#x3D;&quot;py10 grid-span-1&quot; formControlName&#x3D;&quot;lastname&quot; [invalidText]&#x3D;&quot;&#x27;common.required&#x27; | translate&quot; [label]&#x3D;&quot;&#x27;search-client.firstname&#x27; | translate&quot;&gt;&lt;/abe-text&gt;
+    &lt;abe-datepicker class&#x3D;&quot;py10 grid-span-1&quot; formControlName&#x3D;&quot;dob&quot;
+      [assistiveText]&#x3D;&quot;&#x27;search-client.assistive-text--dob&#x27; | translate&quot;
+      [label]&#x3D;&quot; &#x27;search-client.dob&#x27; | translate &quot;
+      [invalidText]&#x3D;&quot;controlsSearchCredentials?.dob?.errors&quot;&gt;&lt;/abe-datepicker&gt;
+
+
+    &lt;abe-checkbox class&#x3D;&quot;py10&quot; formControlName&#x3D;&quot;partial&quot;&gt;{{ &#x27;search-client.partial--search&#x27; | translate }}
+      &lt;abe-info icon&#x3D;&quot;info&quot;&gt;
+        &lt;div&gt;
+          {{ &#x27;search-client.partial--search--info&#x27; | translate }}
+        &lt;/div&gt;
+    &lt;/abe-info&gt;
+    &lt;/abe-checkbox&gt;
+  &lt;/div&gt;
+
+
+  &lt;!-- Horizontal divider --&gt;
+  &lt;div class&#x3D;&quot;form-separator grid-span-3&quot;&gt;&lt;/div&gt;
+
+  &lt;!-- Checkboxes --&gt;
+  &lt;div class&#x3D;&quot;grid-span-2&quot; [formGroup]&#x3D;&quot;formCheckboxes&quot;&gt;
+    &lt;abe-checkbox (abeChange)&#x3D;&quot;manageMandateError($event.detail)&quot; formControlName&#x3D;&quot;mandate&quot;&gt;{{ &#x27;search-client.mandate&#x27; | translate }}
+      &lt;abe-info icon&#x3D;&quot;info&quot;&gt;
+        &lt;div &gt;
+          {{ &#x27;search-client.mandate--info&#x27; | translate  }}
+        &lt;/div&gt;
+    &lt;/abe-info&gt;
+    &lt;/abe-checkbox&gt;
+    &lt;div class&#x3D;&quot;axa-error&quot; *ngIf&#x3D;&quot;!mandateError&quot;&gt;{{ &#x27;common.required&#x27; | translate}} &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;!-- Search button --&gt;
+  &lt;abe-button class&#x3D;&quot;grid-span-1 end-btn&quot; [disabled]&#x3D;&quot;searchBlocked$| async&quot;  (abeClick)&#x3D;&quot;search()&quot;&gt; {{ &#x27;common.search&#x27; | translate }}&lt;/abe-button&gt;
+
+  &lt;div class&#x3D;&quot;body grid-span-3 screen&quot;&gt;
+    {{ &#x27;search-client.form--explanation-p1&#x27; | translate}}
+    &lt;!-- TODO put the correct link --&gt;
+    &lt;a (click)&#x3D;&quot;openLinkInNewTab(&#x27;https://www.google.com&#x27;)&quot;&gt;{{ &#x27;search-client.form--explanation-p2&#x27;  | translate}}&lt;/a&gt;
+    {{ &#x27;search-client.form--explanation-p3&#x27;  | translate}}
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./search.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;~@axa/ng-toolkit-scss/helpers/color&quot;;
+
+.form-separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid $axa-color-silver;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mycontent-left {
+  border-right: 1px solid $axa-color-silver;
+}
+
+.end-btn {
+  // text-align: end;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.screen {
+  width: 65%;
+}
+
+.form {
+  display: grid;
+}
+
+a {
+  color: $axa-color-text-link-normal;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.axa-error {
+  color: $axa-color-error;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Data grid with three columns --><div class="data-grid"  >  <div class="title grid-span-3">{{ \'search-client.title\' | translate }}</div>  <!-- Second option to search, trough policy number -->  <div class="form" [formGroup]="formSearchPolicy">    <abe-text class="py10" formControlName="policynr"      format=\'^[0-9\.,\sBb]+$\'      numbers-only="true"      [assistiveText]="\'search-client.assistive-text--policy\' | translate "      [label]=" \'search-client.policy--nr\' | translate "      [invalidText]="controlsSearchPolicy?.policynr.errors?.invalidMsg | translate"      (abeBlur)="formatPolicyNr()"></abe-text>  </div>  <!-- Vertical divider -->  <div class="mycontent-left"></div>  <!-- First option to search, through credentials -->  <div class="form" [formGroup]="formSearchCredentials">    <abe-text class="py10 grid-span-1" formControlName=\'firstname\' [invalidText]="\'common.required\' | translate" [label]=" \'search-client.lastname\' | translate"></abe-text>    <abe-text class="py10 grid-span-1" formControlName="lastname" [invalidText]="\'common.required\' | translate" [label]="\'search-client.firstname\' | translate"></abe-text>    <abe-datepicker class="py10 grid-span-1" formControlName="dob"      [assistiveText]="\'search-client.assistive-text--dob\' | translate"      [label]=" \'search-client.dob\' | translate "      [invalidText]="controlsSearchCredentials?.dob?.errors"></abe-datepicker>    <abe-checkbox class="py10" formControlName="partial">{{ \'search-client.partial--search\' | translate }}      <abe-info icon="info">        <div>          {{ \'search-client.partial--search--info\' | translate }}        </div>    </abe-info>    </abe-checkbox>  </div>  <!-- Horizontal divider -->  <div class="form-separator grid-span-3"></div>  <!-- Checkboxes -->  <div class="grid-span-2" [formGroup]="formCheckboxes">    <abe-checkbox (abeChange)="manageMandateError($event.detail)" formControlName="mandate">{{ \'search-client.mandate\' | translate }}      <abe-info icon="info">        <div >          {{ \'search-client.mandate--info\' | translate  }}        </div>    </abe-info>    </abe-checkbox>    <div class="axa-error" *ngIf="!mandateError">{{ \'common.required\' | translate}} </div>  </div>  <!-- Search button -->  <abe-button class="grid-span-1 end-btn" [disabled]="searchBlocked$| async"  (abeClick)="search()"> {{ \'common.search\' | translate }}</abe-button>  <div class="body grid-span-3 screen">    {{ \'search-client.form--explanation-p1\' | translate}}    <!-- TODO put the correct link -->    <a (click)="openLinkInNewTab(\'https://www.google.com\')">{{ \'search-client.form--explanation-p2\'  | translate}}</a>    {{ \'search-client.form--explanation-p3\'  | translate}}  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'broker-root'},{'name': 'ClaimoverviewComponent', 'selector': 'broker-claimoverview'},{'name': 'ClosureComponent', 'selector': 'broker-closure'},{'name': 'ConsultComponent', 'selector': 'broker-consult'},{'name': 'DeclarationComponent', 'selector': 'broker-declaration'},{'name': 'ExtensionComponent', 'selector': 'broker-extension'},{'name': 'FooterComponent', 'selector': 'broker-footer'},{'name': 'HeaderComponent', 'selector': 'broker-header'},{'name': 'ResultsComponent', 'selector': 'broker-results'},{'name': 'SearchClientComponent', 'selector': 'broker-search-client'},{'name': 'SearchComponent', 'selector': 'broker-search'}];
+    var DIRECTIVES = [{'name': 'AbeStateTrackerDirective', 'selector': 'abe-text,abe-radio-group,abe-checkbox,abe-dropdown,abe-datepicker,abe-textarea,abe-radio'},{'name': 'PagesAbstractDirective', 'selector': '[brokerPagesAbstract]'}];
+    var ACTUAL_COMPONENT = {'name': 'SearchComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SearchComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
