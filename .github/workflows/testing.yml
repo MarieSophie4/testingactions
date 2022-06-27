@@ -37,16 +37,17 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "Github Actions"
   
-
+      - name: Running compodoc
+        run: |
+          npm install -g @compodoc/compodoc
+          npx compodoc -p tsconfig.doc.json -d ./docs
+          
       - name: Run linters
         run: |
           npm i eslint
           ng lint --fix > lint.txt
           
-      - name: Running compodoc
-        run: |
-          npm install -g @compodoc/compodoc
-          npx compodoc -p tsconfig.doc.json -d ./docs
+
 
       - name: Uploading to git
         run: |
