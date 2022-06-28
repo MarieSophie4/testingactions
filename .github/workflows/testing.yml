@@ -40,7 +40,7 @@ jobs:
           
       - name: Run linters
         run: |
-          npm i eslint
+          npm i -g @angular/cli @angular-devkit/{core,schematics} @angular-eslint/schematics
           ng lint --fix > lint.txt
           
 
