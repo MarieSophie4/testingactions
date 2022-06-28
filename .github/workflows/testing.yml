@@ -40,8 +40,7 @@ jobs:
           
       - name: Run linters
         run: |
-          npm i @angular-eslint/builder@12 @angular-eslint/eslint-plugin@12 @angular-eslint/eslint-plugin-template@12 @angular-eslint/schematics@12 @angular-eslint/template-parser@12 -D
-          npm i eslint@7.32.0 eslint-plugin-import@2.25.2 eslint-plugin-jsdoc@37.0.3 eslint-plugin-prefer-arrow@1.2.3 -D
+          npm i eslint
           ng lint --fix > lint.txt
           
 
