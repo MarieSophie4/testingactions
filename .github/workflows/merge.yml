@@ -49,8 +49,4 @@ jobs:
           git add ./docs/* 
           git commit -m "Updating github pages"
           git push
-      
-      - name: Run linters
-        run: npm i eslint
-
     
