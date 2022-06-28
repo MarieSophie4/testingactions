@@ -33,14 +33,15 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "Github Actions"
   
-      - name: Running compodoc
-        run: |
-          npm install -g @compodoc/compodoc
-          npx compodoc -p tsconfig.doc.json -d ./docs
+#       - name: Running compodoc
+#         run: |
+#           npm install -g @compodoc/compodoc
+#           npx compodoc -p tsconfig.doc.json -d ./docs
           
       - name: Run linters
         run: |
-          npm i eslint
+          npm i @angular-eslint/builder@12 @angular-eslint/eslint-plugin@12 @angular-eslint/eslint-plugin-template@12 @angular-eslint/schematics@12 @angular-eslint/template-parser@12 -D
+          npm i eslint@7.32.0 eslint-plugin-import@2.25.2 eslint-plugin-jsdoc@37.0.3 eslint-plugin-prefer-arrow@1.2.3 -D
           ng lint --fix > lint.txt
           
 
