@@ -25,9 +25,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 12
-
+          cache: 'npm'
+          
       - name: Set Git config
         run: |
           git config --local user.email "actions@github.com"
@@ -39,11 +41,8 @@ jobs:
 #           npx compodoc -p tsconfig.doc.json -d ./docs
           
       - name: Run linters
-        run: |
-          npm i
-          ng lint --fix > lint.txt
-          
-
+      - run: npm ci
+      - run: npm test
 
       - name: Uploading to git
         run: |
