@@ -41,8 +41,9 @@ jobs:
 #           npx compodoc -p tsconfig.doc.json -d ./docs
           
       - name: Run linters
-      - run: npm ci
-      - run: npm test
+      - run: |
+            npm ci
+            npm test
 
       - name: Uploading to git
         run: |
