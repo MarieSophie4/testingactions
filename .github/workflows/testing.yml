@@ -29,7 +29,9 @@ jobs:
         with:
           node-version: 12
           cache: 'npm'
-          
+      - run: npm ci
+      - run: npm test
+
       - name: Set Git config
         run: |
           git config --local user.email "actions@github.com"
@@ -40,11 +42,8 @@ jobs:
 #           npm install -g @compodoc/compodoc
 #           npx compodoc -p tsconfig.doc.json -d ./docs
           
-      - name: Run linters
-      - run: |
-            npm ci
-            npm test
 
+      
       - name: Uploading to git
         run: |
           git checkout documentation
