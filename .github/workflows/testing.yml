@@ -32,7 +32,6 @@ jobs:
       
       - name: Eslinting
         run: |
-          npm cache clean
           npm cache verify
           npm update
           npm install
