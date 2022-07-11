@@ -17,7 +17,7 @@
         "createDefaultProgram": true
       },
       "extends": [
-        "@axa/eslint-config-ng-toolkit"
+        "eslint:recommended"
       ],
       "rules": {
         "@angular-eslint/component-selector" : [
