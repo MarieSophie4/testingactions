@@ -28,9 +28,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 12
-          cache: 'npm'
-      - run: npm i eslint
-      - run: npm test
+          cache: 'npm'  
+      
+      - name: Eslinting
+        run: |
+          npm cache clean
+          npm cache verify
+          npm update
+          npm install
+
 
       - name: Set Git config
         run: |
